@@ -1,34 +1,11 @@
-# Treebank Template
+# Harrington Trees
 
-Template for publishing collections of treebanks.
-
-The treebanks themselves live in the `./public/xml` directory.
-All other configuration is done using `./src/config.json`.
+Migrate [harrington\_trees](https://perseids-project.github.io/harrington_trees/)
+Work on progress.
 
 ## Try it Out
 
-[https://perseids-publications.github.io/treebank-template/](https://perseids-publications.github.io/treebank-template/)
-
-## How to configure with your own treebanks
-
-```
-git clone git@github.com:perseids-publications/treebank-template.git my-trees
-cd my-trees
-git remote rename origin source
-git remote add origin <my-trees origin>
-git push -u origin master
-```
-
-* Copy all your trees into `public/xml`
-* Update the `src/config.json` file
-* Update `name` and `homepage` in `package.json`
-* Update the information in `.env`
-
-### Updating
-
-* `git pull source master`
-* Fix merge conflicts
-* `git push origin master`
+[https://perseids-publications.github.io/harrington-trees/](https://perseids-publications.github.io/harrington-trees/)
 
 ## Installation
 
