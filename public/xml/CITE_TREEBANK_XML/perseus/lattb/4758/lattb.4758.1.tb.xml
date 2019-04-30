@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank xmlns:saxon="http://saxon.sf.net/"
+          xml:lang="lat"
+          format="harrington"
+          direction="ltr"
+          version="1.5">
+   <date>2016-10-19 13:56:55 +0000</date>
+   <annotator>
+      <short/>
+      <name/>
+      <address/>
+      <uri>http://services2.perseids.org/llt/segtok</uri>
+  </annotator>
+   <annotator>
+      <short/>
+      <name/>
+      <address/>
+      <uri>http://github.com/latin-language-toolkit/arethusa</uri>
+  </annotator>
+   <annotator>
+      <short>jmharrington</short>
+      <name>J Matthew Harrington</name>
+      <address>matthew.harrington@tufts.edu</address>
+      <uri>http://data.perseus.org/sosol/users/jmharrington</uri>
+  </annotator>
+   <sentence id="1"
+             document_id="urn:cts:latinLit:phi0660.phi003.perseus-lat1"
+             subdoc="poem 3"
+             span="">
+      <word id="1" form="Scis" lemma="scio" postag="v2spia---" relation="PRED" head="0"/>
+      <word id="2" form="iter" lemma="iter" postag="n-s---na-" relation="A-SUBJ" head="5"/>
+      <word id="3" form="ex" lemma="ex" postag="r--------" relation="AuxP" head="5"/>
+      <word id="4" form="animo" lemma="animus" postag="n-s---mb-" relation="AB-ORIENT" head="3"/>
+      <word id="5" form="sublatum" lemma="tollo" postag="v-srppna-" relation="NOM-INDSTAT_OBJ" head="1"/>
+      <word id="6" form="triste" lemma="tristis" postag="a-s---na-" relation="ATR" head="2"/>
+      <word id="7" form="puellae" lemma="puella" postag="n-s---fg-" relation="G-POSS" head="4"/>
+      <word id="8" form="?" lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+   </sentence>
+   <sentence id="2"
+             document_id="urn:cts:latinLit:phi0660.phi003.perseus-lat1"
+             subdoc="poem 3"
+             span="">
+      <word id="1" form="natali" lemma="natalis1" postag="a-s---mb-" relation="AB-LOCAT" head="5"/>
+      <word id="2" form="Romae" lemma="Roma" postag="n-s---fl-" relation="L-LOCAT" head="5"/>
+      <word id="3" form="iam" lemma="jam" postag="d--------" relation="ADV" head="4"/>
+      <word id="4" form="licet" lemma="licet" postag="v3spia---" relation="PRED" head="0"/>
+      <word id="5" form="esse" lemma="sum1" postag="v--pna---" relation="N-SUBJ" head="4"/>
+      <word id="6" form="meo" lemma="meus" postag="a-s---mb-" relation="ATR" head="1"/>
+      <word id="7" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+   </sentence>
+   <sentence id="3"
+             document_id="urn:cts:latinLit:phi0660.phi003.perseus-lat1"
+             subdoc="poem 3"
+             span="">
+      <word id="1" form="Omnibus" lemma="omnis" postag="a-p---mb-" relation="ATR" head="4"/>
+      <word id="2" form="ille" lemma="ille" postag="p-s---mn-" relation="ATR" head="3"/>
+      <word id="3" form="dies" lemma="dies" postag="n-s---mn-" relation="N-SUBJ" head="6"/>
+      <word id="4" form="nobis" lemma="nos" postag="p-p---mb-" relation="AB-AGENT" head="6"/>
+      <word id="5" form="natalis" lemma="natalis1" postag="a-s---mn-" relation="ATR" head="3"/>
+      <word id="6" form="agatur" lemma="ago" postag="v3spsp---" relation="PRED-HORT" head="0"/>
+      <word id="7" form="," lemma="punc1" postag="u--------" relation="AuxX" head="15"/>
+      <word id="8" form="qui" lemma="qui1" postag="n-s---mn-" relation="N-SUBJ" head="15"/>
+      <word id="9" form="ne" lemma="ne1" postag="d--------" relation="ADV" head="11"/>
+      <word id="10" form="-c" lemma="-que" postag="c--------" relation="ADV" head="11"/>
+      <word id="11" form="opinanti" lemma="opinor" postag="v-spp-md-" relation="ATR" head="13"/>
+      <word id="12" form="nunc" lemma="nunc" postag="d--------" relation="ADV" head="15"/>
+      <word id="13" form="tibi" lemma="tu" postag="p-s---md-" relation="D-INTER" head="15"/>
+      <word id="14" form="forte" lemma="fors" postag="n-s---fb-" relation="AB-CAUSE" head="15"/>
+      <word id="15" form="venit" lemma="venio" postag="v3spia---" relation="ADJ-RC" head="3"/>
+      <word id="16" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+   </sentence>
+</treebank>

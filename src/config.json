@@ -1,80 +1,253 @@
 {
-  "title": "Treebank Publication Template",
-  "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "title": "Tufts University Treebanked Commentaries",
+  "subtitle": "J. Matthew Harrington, General Editor",
   "copyright": "The Perseids Project 2019",
-  "report": "https://github.com/perseids-publications/treebank-template/issues",
-  "github": "https://github.com/perseids-publications/treebank-template/",
+  "report": "https://github.com/perseids-publications/harrington-trees/issues",
+  "github": "https://github.com/perseids-publications/harrington-trees/",
   "twitter": "https://twitter.com/PerseidsProject",
   "collections": [
     {
-      "title": "Collection 1", 
+      "title": "AP Pedagogical Treebanking Project", 
       "publications": [
         {
-          "path": "on-the-murder-of-eratosthenes",
-          "author": "Lysias",
-          "work": "On the Murder of Eratosthenes",
-          "editors": "Vanessa Gorman",
+          "path": "ap-gallic-war",
+          "author": "C. Iulius Caesar",
+          "work": "AP Gallic War",
+          "editors": [
+            "J. Matthew Harrington Ph.D.",
+            "Elizabeth A. Andrews M.A.T.",
+            "L. Bryce Bancroft M.A.T.",
+            "Michal H. Sagal M.A.T."
+          ],
           "sections": [
             {
-              "locus": "1-50",
-              "path": "on-the-murder-of-eratosthenes-1-50",
-              "xml": "lysias-1-1-50.xml",
-              "link": "https://www.example.com",
-              "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-              "chunks": { "start": 1, "end": 134 }
+              "locus": "1.1-1.10",
+              "path": "ap-gallic-war-1-1-10",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7229&doc=lattb.7229.1",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7229/lattb.7229.1.tb.xml",
+              "chunks": { "start": 1, "end": 66 }
+            },
+            {
+              "locus": "4.24-4.36",
+              "path": "ap-gallic-war-4-24-36",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4362/lattb.4362.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4362&doc=lattb.4362.1",
+              "chunks": { "start": 1, "end": 58 }
+            },
+            {
+              "locus": "5.24-5.48",
+              "path": "ap-gallic-war-5-24-48",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4350/lattb.4350.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4350&doc=lattb.4350.1",
+              "chunks": { "start": 1, "end": 173 }
+            },
+            {
+              "locus": "6.13-6.20",
+              "path": "ap-gallic-war-6-13-20",
+              "xml": "CITE_TREEBANK_XML/perseus/misctb/326/misctb.326.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=misctb&objid=326&doc=misctb.326.1",
+              "chunks": { "start": 1, "end": 50 }
             }
           ]
         },
         {
-          "path": "on-the-crown",
-          "author": "Demosthenes",
-          "work": "On the Crown",
-          "editors": "Vanessa Gorman",
+          "path": "ap-aeneid",
+          "author": "P. Vergilius Maro",
+          "work": "AP Aeneid",
+          "editors": [
+            "J. Matthew Harrington Ph.D.",
+            "Elizabeth A. Andrews M.A.T.",
+            "L. Bryce Bancroft M.A.T.",
+            "Michal H. Sagal M.A.T."
+          ],
           "sections": [
             {
-              "locus": "1-50",
-              "path": "on-the-crown-1-50",
-              "xml": "demosthenes-18-1-50.xml",
-              "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-              "chunks": { "start": 1, "end": 160 }
+              "locus": "1.1-1.209",
+              "path": "ap-aeneid-1-1-209",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/6201/lattb.6201.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=6201&doc=lattb.6201.1",
+              "chunks": { "start": 1, "end": 83 }
             },
             {
-              "locus": "51-100",
-              "path": "on-the-crown-51-100",
-              "xml": "demosthenes-18-51-100.xml",
-              "chunks": { "start": 1, "end": 149 }
+              "locus": "1.418-1.440",
+              "path": "ap-aeneid-1-418-440",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4573/lattb.4573.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4573&doc=lattb.4573.1",
+              "chunks": { "start": 1, "end": 9 }
+            },
+            {
+              "locus": "1.494-1.578",
+              "path": "ap-aeneid-1-494-578",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4575/lattb.4575.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4575&doc=lattb.4575.1",
+              "chunks": { "start": 1, "end": 38 }
+            },
+            {
+              "locus": "2.40-2.56",
+              "path": "ap-aeneid-2-40-56",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4577/lattb.4577.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4577&doc=lattb.4577.1",
+              "chunks": { "start": 1, "end": 10 }
+            },
+            {
+              "locus": "2.201-2.249",
+              "path": "ap-aeneid-2-201-249",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4578/lattb.4578.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4578&doc=lattb.4578.1",
+              "chunks": { "start": 1, "end": 24 }
+            },
+            {
+              "locus": "2.268-2.297",
+              "path": "ap-aeneid-2-268-297",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4600/lattb.4600.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4600&doc=lattb.4600.1",
+              "chunks": { "start": 1, "end": 13 }
+            },
+            {
+              "locus": "2.559-2.620",
+              "path": "ap-aeneid-2-559-620",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4601/lattb.4601.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4601&doc=lattb.4601.1",
+              "chunks": { "start": 1, "end": 25 }
+            },
+            {
+              "locus": "4.160-4.218",
+              "path": "ap-aeneid-4-160-218",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4793/lattb.4793.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4793&doc=lattb.4793.1",
+              "chunks": { "start": 1, "end": 21 }
+            },
+            {
+              "locus": "4.259-4.361",
+              "path": "ap-aeneid-4-259-361",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4779/lattb.4779.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4779&doc=lattb.4779.1",
+              "chunks": { "start": 1, "end": 52 }
+            },
+            {
+              "locus": "4.659-4.705",
+              "path": "ap-aeneid-4-659-705",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4780/lattb.4780.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4780&doc=lattb.4780.1",
+              "chunks": { "start": 1, "end": 30 }
+            },
+            {
+              "locus": "6.295-6.332",
+              "path": "ap-aeneid-6-295-332",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4808/lattb.4808.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4808&doc=lattb.4808.1",
+              "chunks": { "start": 1, "end": 19 }
+            },
+            {
+              "locus": "6.384-6.425",
+              "path": "ap-aeneid-6-384-425",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4809/lattb.4809.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4809&doc=lattb.4809.1",
+              "chunks": { "start": 1, "end": 26 }
+            },
+            {
+              "locus": "6.450-6.476",
+              "path": "ap-aeneid-6-450-476",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4810/lattb.4810.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4810&doc=lattb.4810.1",
+              "chunks": { "start": 1, "end": 14 }
+            },
+            {
+              "locus": "6.847-6.901",
+              "path": "ap-aeneid-6-847-901",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4824/lattb.4824.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4824&doc=lattb.4824.1",
+              "chunks": { "start": 1, "end": 26 }
             }
           ]
         }
       ]
     },
     {
-      "title": "Collection 2",
+      "title": "Tufts Latin Treebanked Commentaries", 
       "publications": [
         {
-          "path": "histories",
-          "author": "Herodotus",
-          "work": "The Histories",
-          "editors": "Vanessa Gorman",
+          "path": "res-gestae-divi-augusti",
+          "author": "C. Iulius Caesar Augustus",
+          "work": "Res Gestae Divi Augusti",
+          "editors": [
+            "J. Matthew Harrington Ph.D.",
+            "Elliot Blume-Pickle",
+            "Cornelia Johnston",
+            "Christian Kelley",
+            "Tom Meade",
+            "Kayla Wiliamson"
+          ],
           "sections": [
             {
-              "locus": "40-59",
-              "path": "histories-40-59",
-              "xml": "herodotus-1-40-59.xml",
-              "chunks": { "start": 1, "end": 100 }
+              "locus": "Res Gestae",
+              "path": "res-gestae-divi-augusti-res-gestae",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/4301/lattb.4301.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=4301&doc=lattb.4301.1",
+              "chunks": { "start": 1, "end": 116 }
+            }
+          ]
+        },
+        {
+          "path": "commentarii-de-bello-gallico-1",
+          "author": "C. Iulius Caesar",
+          "work": "Commentarii de Bello Gallico, Book 1",
+          "editors": [
+            "J. Matthew Harrington Ph.D.",
+            "Elizabeth A. Andrews M.A.T.",
+            "L. Bryce Bancroft M.A.T.",
+            "Michal H. Sagal M.A.T.",
+            "Brian R. Clark",
+            "Jeanne M. Cook",
+            "Tianran Liu",
+            "Maria Mo",
+            "James R. Prosser",
+            "Kieran H. Sadler",
+            "Mercedes Sisk",
+            "Jiyoung Song"
+          ],
+          "sections": [
+            {
+              "locus": "1.1-1.10",
+              "path": "commentarii-de-bello-gallico-1-1-10",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7229/lattb.7229.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7229&doc=lattb.7229.1",
+              "chunks": { "start": 1, "end": 66 }
             },
             {
-              "locus": "60-79",
-              "path": "histories-60-79",
-              "xml": "herodotus-1-60-79.xml",
-              "chunks": { "start": 1, "end": 166 }
+              "locus": "1.11-1.20",
+              "path": "commentarii-de-bello-gallico-1-11-20",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7223/lattb.7223.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7223&doc=lattb.7223.1",
+              "chunks": { "start": 1, "end": 91 }
             },
             {
-              "locus": "80-99",
-              "path": "histories-80-99",
-              "xml": "herodotus-1-80-99.xml",
-              "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-              "chunks": { "start": 1, "end": 185 }
+              "locus": "1.21-1.30",
+              "path": "commentarii-de-bello-gallico-1-21-30",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7233/lattb.7233.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7233&doc=lattb.7233.1",
+              "chunks": { "start": 1, "end": 62 }
+            },
+            {
+              "locus": "1.31-1.40",
+              "path": "commentarii-de-bello-gallico-1-31-40",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7270/lattb.7270.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7270&doc=lattb.7270.1",
+              "chunks": { "start": 1, "end": 97 }
+            },
+            {
+              "locus": "1.41-1.50",
+              "path": "commentarii-de-bello-gallico-1-41-50",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7235/lattb.7235.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7235&doc=lattb.7235.1",
+              "chunks": { "start": 1, "end": 91 }
+            },
+            {
+              "locus": "1.51-1.54",
+              "path": "commentarii-de-bello-gallico-1-51-54",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/7236/lattb.7236.1.tb.xml",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7236&doc=lattb.7236.1",
+              "chunks": { "start": 1, "end": 91 }
             }
           ]
         }
