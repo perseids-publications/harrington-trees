@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank xmlns:saxon="http://saxon.sf.net/"
+          xml:lang="lat"
+          format="harrington"
+          direction="ltr"
+          version="1.5">
+   <date>2017-09-18 01:12:08 +0000</date>
+   <annotator>
+      <short/>
+      <name/>
+      <address/>
+      <uri>https://services.perseids.org/llt/segtok</uri>
+  </annotator>
+   <annotator>
+      <short/>
+      <name/>
+      <address/>
+      <uri>http://github.com/latin-language-toolkit/arethusa</uri>
+  </annotator>
+   <annotator>
+      <short>jmharrington</short>
+      <name>J Matthew Harrington</name>
+      <address>matthew.harrington@tufts.edu</address>
+      <uri>http://data.perseus.org/sosol/users/jmharrington</uri>
+  </annotator>
+   <sentence id="1" document_id="" subdoc="" span="">
+      <word id="1" form="Qui" lemma="qui2" postag="p-p---mn-" relation="N-SUBJ" head="4"/>
+      <word id="2" form="modo" lemma="modo" postag="d--------" relation="ADV" head="4"/>
+      <word id="3" form="Nasonis" lemma="Naso" postag="n-s---mg-" relation="G-POSS" head="6"/>
+      <word id="4" form="fueramus" lemma="sum1" postag="v1plia---" relation="ADJ-RC_SBJ" head="9"/>
+      <word id="5" form="quinque" lemma="quinque1" postag="m--------" relation="ATR" head="6"/>
+      <word id="6" form="libelli" lemma="libellus" postag="n-p---mn-" relation="N-PRED" head="4"/>
+      <word id="7" form="," lemma="punc1" postag="u--------" relation="AuxX" head="4"/>
+      <word id="8" form="tres" lemma="tres" postag="m-p---mn-" relation="N-PRED" head="9"/>
+      <word id="9" form="sumus" lemma="sum1" postag="v1ppia---" relation="PRED" head="0"/>
+      <word id="10" form=";" lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+   </sentence>
+   <sentence id="2" document_id="" subdoc="" span="">
+      <word id="1" form="hoc" lemma="hic" postag="p-s---na-" relation="ATR" head="5"/>
+      <word id="2" form="illi" lemma="ille" postag="p-s---nd-" relation="D-REFER" head="3"/>
+      <word id="3" form="praetulit" lemma="praefero" postag="v3sria---" relation="PRED" head="0"/>
+      <word id="4" form="auctor" lemma="auctor" postag="n-s---mn-" relation="N-SUBJ" head="3"/>
+      <word id="5" form="opus" lemma="opus1" postag="n-s---na-" relation="A-DO" head="3"/>
+      <word id="6" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+   </sentence>
+   <sentence id="3" document_id="" subdoc="" span="">
+      <word id="1" form="ut" lemma="ut" postag="d--------" relation="AuxC" head="15"/>
+      <word id="2" form="iam" lemma="jam" postag="d--------" relation="ADV" head="6"/>
+      <word id="3" form="nulla" lemma="nullus" postag="a-s---fn-" relation="ATR" head="8"/>
+      <word id="4" form="tibi" lemma="tu" postag="p-s---md-" relation="D-INTER" head="6"/>
+      <word id="5" form="nos" lemma="nos" postag="p-p---ma-" relation="A-DO" head="7"/>
+      <word id="6" form="sit" lemma="sum1" postag="v3spsa---" relation="ADV-CONCESS" head="1"/>
+      <word id="7" form="legisse" lemma="lego2" postag="v--rna---" relation="N-SUBJ" head="6"/>
+      <word id="8" form="voluptas" lemma="voluptas" postag="n-s---fn-" relation="N-PRED" head="6"/>
+      <word id="9" form="," lemma="punc1" postag="u--------" relation="AuxX" head="6"/>
+      <word id="10" form="at" lemma="at" postag="c--------" relation="ADV" head="15"/>
+      <word id="11" form="levior" lemma="levis1" postag="a-s---fnc" relation="N-PRED" head="15"/>
+      <word id="12" form="demptis" lemma="demo" postag="v-prppmb-" relation="AB-ABSOL" head="15"/>
+      <word id="13" form="poena" lemma="poena" postag="n-s---fn-" relation="N-SUBJ" head="15"/>
+      <word id="14" form="duobus" lemma="duo" postag="a-p---mb-" relation="AB-ABSOL" head="12"/>
+      <word id="15" form="erit" lemma="sum1" postag="v3sfia---" relation="PRED" head="0"/>
+      <word id="16" form="." lemma="punc1" postag="u--------" relation="AuxK" head="0"/>
+   </sentence>
+</treebank>

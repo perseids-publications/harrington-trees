@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treebank xmlns:saxon="http://saxon.sf.net/"
+          xml:lang="lat"
+          format="harrington"
+          direction="ltr"
+          version="1.5">
+   <date>2017-09-17 13:39:07 +0000</date>
+   <annotator>
+      <short/>
+      <name/>
+      <address/>
+      <uri>https://services.perseids.org/llt/segtok</uri>
+  </annotator>
+   <annotator>
+      <short/>
+      <name/>
+      <address/>
+      <uri>http://github.com/latin-language-toolkit/arethusa</uri>
+  </annotator>
+   <annotator>
+      <short>jmharrington</short>
+      <name>J Matthew Harrington</name>
+      <address>matthew.harrington@tufts.edu</address>
+      <uri>http://data.perseus.org/sosol/users/jmharrington</uri>
+  </annotator>
+   <sentence id="1"
+             document_id="urn:cts:latinLit:phi0472.phi001.perseus-lat2"
+             subdoc="14a.1-3"
+             span="">
+      <word id="1" form="Si" lemma="si" postag="c--------" relation="AuxC" head="16"/>
+      <word id="2" form="qui" lemma="quis2" postag="p-p---mn-" relation="N-SUBJ" head="7"/>
+      <word id="3" form="forte" lemma="fors" postag="n-s---fb-" relation="AB-CAUSE" head="7"/>
+      <word id="4" form="mearum" lemma="meus" postag="a-p---fg-" relation="ATR" head="5"/>
+      <word id="5" form="ineptiarum" lemma="ineptia" postag="n-p---fg-" relation="G-OBJEC" head="6"/>
+      <word id="6" form="lectores" lemma="lector" postag="n-p---mn-" relation="N-PRED" head="7"/>
+      <word id="7" form="eritis" lemma="sum1" postag="v2pfia---" relation="ADV-PROTAS_CO" head="9"/>
+      <word id="8" form="manus" lemma="manus1" postag="n-p---fa-" relation="A-DO" head="13"/>
+      <word id="9" form="-que" lemma="-que" postag="c--------" relation="COORD" head="1"/>
+      <word id="10" form="vestras" lemma="vester" postag="a-p---fa-" relation="ATR" head="8"/>
+      <word id="11" form="non" lemma="non" postag="d--------" relation="ADV" head="12"/>
+      <word id="12" form="horrebitis" lemma="horreo" postag="v2pfia---" relation="ADV-PROTAS_CO" head="9"/>
+      <word id="13" form="admovere" lemma="admoveo" postag="v--pna---" relation="INF-COMP" head="12"/>
+      <word id="14" form="nobis" lemma="nos" postag="p-p---md-" relation="D-REFER" head="13"/>
+      <word id="15" form="," lemma="punc1" postag="u--------" relation="AuxX" head="9"/>
+      <word id="16" insertion_id="0015e" artificial="elliptic" relation="PRED" form="[..." head="0"/>
+   </sentence>
+</treebank>
