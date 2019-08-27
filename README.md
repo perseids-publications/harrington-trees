@@ -1,7 +1,6 @@
 # Harrington Trees
 
-Migrate [harrington\_trees](https://perseids-project.github.io/harrington_trees/)
-Work on progress.
+Treebanked commentaries by J. Matthew Harrington and students.
 
 ## Try it Out
 
@@ -28,6 +27,12 @@ If you want to deploy it at `www.example.com/lexica/lsj` then run
 ## Deploying a new version to github.io
 
 `yarn deploy`
+
+### Updating template
+
+* `git pull source master`
+* Fix merge conflicts
+* `git push origin master`
 
 ## Licenses
 
