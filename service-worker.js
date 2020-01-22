@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/harrington-trees/precache-manifest.e34daf5badc0020387fd82e13ab9db45.js"
+  "/harrington-trees/precache-manifest.54af7f6fbd3244a3397d4058a10e72a3.js"
 );
 
 self.addEventListener('message', (event) => {
