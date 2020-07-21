@@ -28,27 +28,24 @@ See [docs/CONFIG.md](docs/CONFIG.md) for more information about the format of `s
 
 ### Updating
 
-* `git pull source master`
-* Fix merge conflicts
-* `git push origin master`
-
-### Setting up automatic deployment with Travis
-
-* `gem install travis`
-* `ssh-keygen -t rsa -b 4096 -f .travis-deploy-key -N ''`
-* Copy `.travis-deploy-key.pub` to clipboard
-* Visit `github.com/<user>/<repository>/settings/keys`
-* Click `Add deploy key`
-* Title the key `Travis deploy key`, paste the contents of `.travis-deploy-key.pub`, check `Allow write access`, and click `Add key`
-* `rm .travis-deploy-key.pub`
-* `travis login --com`
-* Open `.travis.yml` and remove the line starting with `openssl ...` in the `before_install` section
-* `travis encrypt-file .travis-deploy-key --pro --add`
-* Update the formatting in `.travis.yml`
-* `rm .travis-deploy-key`
-* `git add .travis-deploy-key.enc`
+* `git pull source master --no-commit` (if there is no `source` repository, then run
+  `git remote add source https://github.com/perseids-publications/treebank-template.git`
+  then `git pull source master --no-commit`)
+* Fix merge conflicts:
+```bash
+git checkout --theirs .
+git checkout --ours public/xml
+git checkout --ours .env
+git checkout --ours README.md
+git checkout --ours src/config.json
+```
+* Run `git status`. In some cases there may be files that are marked as `deleted by them`.
+  For each of these, do `git rm <path-to-file>`
+* The `package.json` needs to be edited manually. The `name`, `version,` and `homepage` fields should reflect
+  `origin`, while all other values should reflect `source`
+* `git add .`
 * `git commit`
-* `git push`
+* `git push origin master`
 
 ## Installation
 
