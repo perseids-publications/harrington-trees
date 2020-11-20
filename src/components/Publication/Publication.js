@@ -170,6 +170,7 @@ class Publication extends Component {
               location={location}
               match={match}
               arethusa={this.arethusa}
+              setSubdoc={(subDoc) => this.setState({ subDoc })}
             />
           </div>
           <div className="pt-1 pb-4 text-right">

@@ -5,7 +5,7 @@ import {
   Sentence,
   Text,
   Graph,
-  Information,
+  PartOfSpeech,
   Xml,
   Collapse,
 } from 'treebank-react';
@@ -90,6 +90,7 @@ class Treebank extends Component {
 
     if (this.isExperimental()) {
       const { loadedXml } = this.state;
+      const { setSubdoc } = this.props;
 
       if (!loadedXml) {
         return (
@@ -109,14 +110,14 @@ class Treebank extends Component {
           />
           <div className="mb-4">
             <TB treebank={loadedXml}>
-              <Sentence id={chunk}>
+              <Sentence id={chunk} callback={({ $: { subdoc } }) => setSubdoc(subdoc)}>
                 <div className={styles.text}>
                   <Text />
                 </div>
                 <div style={{ display: 'flex', minHeight: '500px', height: '60vh' }}>
                   <Graph />
                 </div>
-                <Information />
+                <PartOfSpeech />
                 <Collapse title="XML">
                   <Xml />
                 </Collapse>
