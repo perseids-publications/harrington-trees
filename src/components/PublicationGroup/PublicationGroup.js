@@ -14,6 +14,7 @@ const renderCollection = (collection) => {
       key={title}
       title={title}
       publications={publications}
+      expanded
     />
   );
 };

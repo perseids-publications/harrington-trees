@@ -32,6 +32,51 @@ it('renders the main page with markdown in the subtitle', () => {
   config.subtitle = subtitle;
 });
 
+it('does not render collections that are hidden', () => {
+  config.collections[1].hidden = true;
+
+  const component = (
+    <MemoryRouter initialEntries={['/']}>
+      <Page config={config} />
+    </MemoryRouter>
+  );
+  const tree = renderer.create(component).toJSON();
+
+  expect(tree).toMatchSnapshot();
+
+  delete config.collections[1].hidden;
+});
+
+it('renders a link to the full publication when publication is collapsed', () => {
+  config.collections[1].publications[0].collapsed = true;
+
+  const component = (
+    <MemoryRouter initialEntries={['/']}>
+      <Page config={config} />
+    </MemoryRouter>
+  );
+  const tree = renderer.create(component).toJSON();
+
+  expect(tree).toMatchSnapshot();
+
+  delete config.collections[1].publications[0].collapsed;
+});
+
+it('does not render a publication that is hidden', () => {
+  config.collections[1].publications[1].hidden = true;
+
+  const component = (
+    <MemoryRouter initialEntries={['/']}>
+      <Page config={config} />
+    </MemoryRouter>
+  );
+  const tree = renderer.create(component).toJSON();
+
+  expect(tree).toMatchSnapshot();
+
+  delete config.collections[1].publications[1].hidden;
+});
+
 it('renders the footer with a doi', () => {
   config.doi = 'https://www.example.com/doi';
 
@@ -130,6 +175,21 @@ it('renders a publication group', () => {
   const tree = renderer.create(component).toJSON();
 
   expect(tree).toMatchSnapshot();
+});
+
+it('renders a publication group when a publication is collapsed', () => {
+  config.collections[1].publications[0].collapsed = true;
+
+  const component = (
+    <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes']}>
+      <Page config={config} />
+    </MemoryRouter>
+  );
+  const tree = renderer.create(component).toJSON();
+
+  expect(tree).toMatchSnapshot();
+
+  delete config.collections[1].publications[0].collapsed;
 });
 
 it('renders 404 when publication not found', () => {

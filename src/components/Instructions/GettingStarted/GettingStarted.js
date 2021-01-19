@@ -874,6 +874,30 @@ const GettingStarted = ({ config }) => (
                     />
                   </a>
 
+                  <br />
+                  The following fields are optional and can be used for
+                  more advanced configuration:
+
+                  <ul>
+                    <li>
+                      <code>hidden</code>
+                      : if set to
+                      {' '}
+                      <code>true</code>
+                      , the publication will not
+                      be displayed.
+                    </li>
+                    <li>
+                      <code>collapsed</code>
+                      : if set to
+                      {' '}
+                      <code>true</code>
+                      , the publication will link
+                      to a separate page containing a list of sections instead
+                      of listing each section on the home page.
+                    </li>
+                  </ul>
+
                 </li>
                 <li>
                   It&apos;s a good idea to make sure the file parses as valid JSON prior

@@ -28,13 +28,16 @@ export const publicationType = shape({
   author: string.isRequired,
   work: string.isRequired,
   editors: oneOfType([string, arrayOf(string)]).isRequired,
+  hidden: bool,
+  collapsed: bool,
   sections: arrayOf(sectionType).isRequired,
 });
 
 export const collectionType = shape({
   title: oneOfType([string, element]).isRequired,
-  publications: arrayOf(publicationType),
   text: string,
+  hidden: bool,
+  publications: arrayOf(publicationType),
 });
 
 export const configType = shape({
