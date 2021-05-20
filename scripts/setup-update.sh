@@ -24,6 +24,7 @@ git restore --source "$1" .
 
 # Check out files and directories that may be modified
 git checkout origin/master public/xml
+git checkout origin/master public/docs
 git checkout origin/master .env
 git checkout origin/master README.md
 git checkout origin/master src/config.json
