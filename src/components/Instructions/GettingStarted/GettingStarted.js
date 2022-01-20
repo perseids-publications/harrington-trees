@@ -863,6 +863,24 @@ const GettingStarted = ({ config }) => (
                           </ul>
                         </li>
                       </ul>
+
+                      The following fields are optional and can be used for
+                      more advanced configuration:
+
+                      <ul>
+                        <li>
+                          <code>link</code>
+                          : link to an external site.
+                        </li>
+                        <li>
+                          <code>license</code>
+                          : description of the license for this treebank.
+                        </li>
+                        <li>
+                          <code>notes</code>
+                          : any additional information.
+                        </li>
+                      </ul>
                     </li>
                   </ul>
 

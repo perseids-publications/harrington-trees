@@ -19,6 +19,7 @@ export const sectionType = shape({
   path: string.isRequired,
   xml: string.isRequired,
   link: string,
+  license: string,
   notes: string,
   chunks: chunksType.isRequired,
 });
@@ -51,7 +52,6 @@ export const configType = shape({
   github: string,
   twitter: string,
   collections: arrayOf(collectionType).isRequired,
-  treebankReact: bool,
 });
 
 export const locationType = shape({

@@ -30,9 +30,9 @@ const renderSection = (section) => {
 
   return (
     <Fragment key={path}>
-      <a href={`${path}/${start}`}>
+      <Link to={`${path}/${start}`}>
         {locus}
-      </a>
+      </Link>
       <br />
     </Fragment>
   );

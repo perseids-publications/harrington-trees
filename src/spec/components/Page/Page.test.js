@@ -1,9 +1,25 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+import { render, waitForElementToBeRemoved } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import Page from './Page';
-import config from './config.test.json';
+import config from '../../config.test.json';
+import treebanks from '../../treebanks.test.json';
+
+import Page from '../../../components/Page';
+
+jest.mock('treebank-react');
+
+const server = setupServer(
+  rest.get(`${process.env.PUBLIC_URL}/xml/lysias-1-1-50.xml`, (req, res, ctx) => (
+    res(ctx.delay(10), ctx.text(treebanks.lysias))
+  )),
+);
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
 
 it('renders the main page', () => {
   const component = (
@@ -11,9 +27,9 @@ it('renders the main page', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders the main page with markdown in the subtitle', () => {
@@ -25,9 +41,9 @@ it('renders the main page with markdown in the subtitle', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   config.subtitle = subtitle;
 });
@@ -40,9 +56,9 @@ it('does not render collections that are hidden', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.collections[1].hidden;
 });
@@ -55,9 +71,9 @@ it('renders a link to the full publication when publication is collapsed', () =>
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.collections[1].publications[0].collapsed;
 });
@@ -70,9 +86,9 @@ it('does not render a publication that is hidden', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.collections[1].publications[1].hidden;
 });
@@ -85,85 +101,84 @@ it('renders the footer with a doi', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.doi;
 });
 
-it('renders a publication', () => {
+it('renders a publication', async () => {
   const component = (
     <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes-1-50/1']}>
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container, queryByText } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
+
+  await waitForElementToBeRemoved(() => queryByText('Loading...'));
+
+  expect(container).toMatchSnapshot();
 });
 
-it('renders a publication with additional arguments to Arethusa', () => {
+it('renders a publication with a subdoc', async () => {
+  const { sentenceCallbackValue } = global;
+  global.sentenceCallbackValue = { sentence: { $: { subdoc: 'example-subdoc' } } };
+
   const component = (
-    <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes-1-50/1?w=2']}>
+    <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes-1-50/1']}>
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container, findByText, queryByText } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  await waitForElementToBeRemoved(() => queryByText('Loading...'));
+  await findByText('example-subdoc');
+
+  expect(container).toMatchSnapshot();
+
+  global.sentenceCallbackValue = sentenceCallbackValue;
 });
 
-it('renders a publication with a template that shows the morphology', () => {
+it('renders a publication with highlighted words', async () => {
   const component = (
-    <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes-1-50/1?config=sidepanel']}>
+    <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes-1-50/1?w=2,3']}>
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container, queryByText } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  await waitForElementToBeRemoved(() => queryByText('Loading...'));
+
+  expect(container).toMatchSnapshot();
 });
 
-it('renders a publication with markdown', () => {
+it('renders a publication with markdown', async () => {
   const component = (
     <MemoryRouter initialEntries={['/on-the-crown-1-50/1']}>
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container, queryByText } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  await waitForElementToBeRemoved(() => queryByText('Loading...'));
+
+  expect(container).toMatchSnapshot();
 });
 
-it('renders a publication with a subdoc', () => {
-  const component = (
-    <MemoryRouter initialEntries={['/on-the-crown-1-50/1']}>
-      <Page config={config} />
-    </MemoryRouter>
-  );
-  const renderedComponent = renderer.create(component);
-  const originalArethusaApiGetSubdocFun = window.arethusaApiGetSubdocFun;
-
-  window.arethusaApiGetSubdocFun = () => '1.1';
-  window.document.body.dispatchEvent(new window.Event('ArethusaLoaded'));
-
-  const tree = renderedComponent.toJSON();
-
-  expect(tree).toMatchSnapshot();
-
-  window.arethusaApiGetSubdocFun = originalArethusaApiGetSubdocFun;
-});
-
-it('renders a publication with a numbers array', () => {
+it('renders a publication with a numbers array', async () => {
   const component = (
     <MemoryRouter initialEntries={['/philippic-1-51/1']}>
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container, queryByText } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  await waitForElementToBeRemoved(() => queryByText('Loading...'));
+
+  expect(container).toMatchSnapshot();
 });
 
 it('renders a publication group', () => {
@@ -172,9 +187,9 @@ it('renders a publication group', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders a publication group when a publication is collapsed', () => {
@@ -185,9 +200,9 @@ it('renders a publication group when a publication is collapsed', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.collections[1].publications[0].collapsed;
 });
@@ -198,9 +213,9 @@ it('renders 404 when publication not found', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders 404 when publication and chunk not found', () => {
@@ -209,9 +224,9 @@ it('renders 404 when publication and chunk not found', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders 404 when route does not match known route', () => {
@@ -220,9 +235,9 @@ it('renders 404 when route does not match known route', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders no logo when logo set to ""', () => {
@@ -233,9 +248,9 @@ it('renders no logo when logo set to ""', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.logo;
 });
@@ -248,9 +263,9 @@ it('renders a custom link', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 
   delete config.link;
 });
@@ -261,9 +276,9 @@ it('renders the getting started page', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders the doi page', () => {
@@ -272,9 +287,9 @@ it('renders the doi page', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders the update page', () => {
@@ -283,9 +298,9 @@ it('renders the update page', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 it('renders 404 when no instruction route matches', () => {
@@ -294,22 +309,7 @@ it('renders 404 when no instruction route matches', () => {
       <Page config={config} />
     </MemoryRouter>
   );
-  const tree = renderer.create(component).toJSON();
+  const { container } = render(component);
 
-  expect(tree).toMatchSnapshot();
-});
-
-it('renders differently when treebankReact is set', () => {
-  config.treebankReact = true;
-
-  const component = (
-    <MemoryRouter initialEntries={['/on-the-murder-of-eratosthenes-1-50/1']}>
-      <Page config={config} />
-    </MemoryRouter>
-  );
-  const tree = renderer.create(component).toJSON();
-
-  expect(tree).toMatchSnapshot();
-
-  delete config.treebankReact;
+  expect(container).toMatchSnapshot();
 });
