@@ -671,6 +671,38 @@
           ]
         },
         {
+          "path": "ars-amatoria",
+          "author": "P. Ovidius Naso",
+          "work": "Ars Amatoria",
+          "editors": [
+            "J. Matthew Harrington Ph.D.",
+            "Isabel Cooperman"
+          ],
+          "sections": [
+            {
+              "locus": "Book I",
+              "path": "ars-amatoria-i",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=8000&doc=lattb.8000.1",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/8000/lattb.8000.1.tb.xml",
+              "chunks": { "start": 1, "end": 328 }
+            },
+            {
+              "locus": "Book II",
+              "path": "ars-amatoria-ii",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=8100&doc=lattb.8100.1",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/8100/lattb.8100.1.tb.xml",
+              "chunks": { "start": 1, "end": 326 }
+            },
+            {
+              "locus": "Book III",
+              "path": "ars-amatoria-iii",
+              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=8200&doc=lattb.8200.1",
+              "xml": "CITE_TREEBANK_XML/perseus/lattb/8200/lattb.8200.1.tb.xml",
+              "chunks": { "start": 1, "end": 349 }
+            }
+          ]
+        },
+        {
           "path": "metamorphoseon-libri-book-1",
           "author": "P. Ovidius Naso",
           "work": "Metamorphoseon Libri, Book 1",
@@ -972,38 +1004,6 @@
               "xml": "CITE_TREEBANK_XML/perseus/lattb/7424/lattb.7424.1.tb.xml",
               "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=7424&doc=lattb.7424.1",
               "chunks": { "start": 1, "end": 85 }
-            }
-          ]
-        },
-        {
-          "path": "ars-amatoria",
-          "author": "P. Ovidius Naso",
-          "work": "Ars Amatoria",
-          "editors": [
-            "J. Matthew Harrington Ph.D.",
-            "Isabel Cooperman"
-          ],
-          "sections": [
-            {
-              "locus": "Book I",
-              "path": "ars-amatoria-i",
-              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=8000&doc=lattb.8000.1",
-              "xml": "CITE_TREEBANK_XML/perseus/lattb/8000/lattb.8000.1.tb.xml",
-              "chunks": { "start": 1, "end": 328 }
-            },
-            {
-              "locus": "Book II",
-              "path": "ars-amatoria-ii",
-              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=8100&doc=lattb.8100.1",
-              "xml": "CITE_TREEBANK_XML/perseus/lattb/8100/lattb.8100.1.tb.xml",
-              "chunks": { "start": 1, "end": 326 }
-            },
-            {
-              "locus": "Book III",
-              "path": "ars-amatoria-iii",
-              "link": "https://www.perseids.org/tools/arethusa/app/#/jmh?collid=lattb&objid=8200&doc=lattb.8200.1",
-              "xml": "CITE_TREEBANK_XML/perseus/lattb/8200/lattb.8200.1.tb.xml",
-              "chunks": { "start": 1, "end": 349 }
             }
           ]
         }
